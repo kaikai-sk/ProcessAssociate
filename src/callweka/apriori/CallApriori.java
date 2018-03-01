@@ -15,16 +15,15 @@ public class CallApriori
 {
     public static void main(String[] args) throws Exception
     {
-        String fileName="C:\\Users\\shankai\\Desktop\\write_cache_log_tencent_backup.csv";
+        String fileName="ts0-input-t.txt";
         String dstFilePath=fileName+"_sk.csv";
         //preprocess the file
-        processFile(fileName,dstFilePath,20,2);
+        processFile(fileName,dstFilePath,10,0);
         //call Apriori
-        Instances data= ConverterUtils.DataSource.read(dstFilePath);
-        Apriori apriori=new Apriori();
-        apriori.buildAssociations( data );
-        System.out.println(apriori.toString());
-
+//        Instances data= ConverterUtils.DataSource.read(dstFilePath);
+//        Apriori apriori=new Apriori();
+//        apriori.buildAssociations( data );
+//        System.out.println(apriori.toString());
     }
 
     /**
