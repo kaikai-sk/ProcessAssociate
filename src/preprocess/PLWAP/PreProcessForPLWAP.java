@@ -10,9 +10,69 @@ public class PreProcessForPLWAP
 {
     public static void main(String[] args)
     {
-        //processFile("data/mytrace.txt","dstForPLWAP.data"," -1 ",10);
-//    	processFileChangeSeparator("data/mytrace.txt","dstForPLWAP.data");
-    	processFileMatrix2Vec("data/mytrace.txt", "data/mytrace1.txt");
+        processFile("data/ts0_1.txt","dstForPLWAP.data"," -1 ",10);
+        
+//    	processFileChangeSeparator("data/mytrace.txt","sk.data"," ");
+//    	processFileMatrix2Vec("data/mytrace.txt", "data/mytrace1.txt");
+    	
+//    	processFileRules2TwoItems("rules.txt","result_PLWAP_post.data");
+    }
+    
+    public static void processFileRules2TwoItems(String filePath,String dstFilePath)
+    {
+    	try
+        {
+            String encoding="UTF-8";
+            File file=new File(filePath);
+            //判断文件是否存在
+            if(file.isFile() && file.exists())
+            {
+                InputStreamReader read = new InputStreamReader(
+                        new FileInputStream(file),encoding);//考虑到编码格式
+                BufferedReader bufferedReader = new BufferedReader(read);
+
+                // 打开一个写文件器，不追加写
+                FileWriter writer = new FileWriter(dstFilePath, false);
+
+                String lineTxt = null;
+                int lineIndex=0;
+                String newLine="";
+                
+                while((lineTxt = bufferedReader.readLine()) != null)
+                {
+                	lineIndex++;
+                	
+                	newLine=lineTxt.substring(0,lineTxt.indexOf('#'));
+                	String[] temp=newLine.split("==>");
+                	String[] left;
+                	String[] right;
+                	
+                	temp[0]=temp[0].trim();
+                	temp[0]=temp[1].trim();
+                	
+                	left=temp[0].split(" ");
+                	right=temp[1].split(" ");
+                	if(left.length==1 && right.length==1)
+                	{
+                		//写文件
+	                    writer.write(left[0]+" "+right[0]+"\n");
+	                    writer.flush();	
+                	}
+                }
+
+                read.close();
+                writer.close();
+            }
+            else
+            {
+                System.out.println("找不到指定的文件");
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("读取文件内容出错");
+            e.printStackTrace();
+        }
     }
     
     public static void processFileMatrix2Vec(String filePath,String dstFilePath)
@@ -64,7 +124,13 @@ public class PreProcessForPLWAP
         }
     }
     
-    public static void processFileChangeSeparator(String filePath,String dstFilePath)
+    /**
+     * 将一个矩阵型的数据该换分隔符
+     * @param filePath
+     * @param dstFilePath
+     * @param separater
+     */
+    public static void processFileChangeSeparator(String filePath,String dstFilePath,String separater)
     {
     	try
         {
@@ -88,7 +154,7 @@ public class PreProcessForPLWAP
                 {
                 	lineIndex++;
                   
-                	lineTxt=lineTxt.replaceAll(" ", " -1 ");
+                	lineTxt=lineTxt.replaceAll(separater, " -1 ");
                 	lineTxt+=" -2\n";
                 	
                 	//写文件

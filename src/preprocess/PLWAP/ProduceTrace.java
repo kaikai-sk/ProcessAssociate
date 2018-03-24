@@ -12,7 +12,7 @@ public class ProduceTrace
 	{
 		String filePath="data/mytrace.txt";
 		int windowSize=10;
-		int lineNum=100000;
+		int lineNum=100;
 		generateTrace(filePath,windowSize,lineNum);
 	}
 
@@ -25,12 +25,12 @@ public class ProduceTrace
         {
         	ArrayList<ArrayList<String>> block=new ArrayList<ArrayList<String>>();
         	
-        	ArrayList<Integer> lineIndex80Percentile=new ArrayList<Integer>();
-    		ArrayList<Integer> lineIndex70Percentile=new ArrayList<Integer>();
-    		ArrayList<Integer> lineIndex60Percentile=new ArrayList<Integer>();
-    		genknuth(80,100,lineIndex80Percentile);
-    		genknuth(70,100,lineIndex70Percentile);
+        	ArrayList<Integer> lineIndex60Percentile=new ArrayList<Integer>();
+    		ArrayList<Integer> lineIndex50Percentile=new ArrayList<Integer>();
+    		ArrayList<Integer> lineIndex40Percentile=new ArrayList<Integer>();
     		genknuth(60,100,lineIndex60Percentile);
+    		genknuth(50,100,lineIndex50Percentile);
+    		genknuth(40,100,lineIndex40Percentile);
     		
     		int lineIndex=0;
         	for (int j=0;j<100;j++)
@@ -51,7 +51,7 @@ public class ProduceTrace
         				break;
         			//80 percentile
         			case 2:
-        				if (lineIndex80Percentile.contains(lineIndex))
+        				if (lineIndex60Percentile.contains(lineIndex))
         				{
         					aLine[2*k]="1111";
             				aLine[2*k+1]="2222";
@@ -64,7 +64,7 @@ public class ProduceTrace
         				break;
         			//70 percentile
         			case 3:
-        				if (lineIndex70Percentile.contains(lineIndex))
+        				if (lineIndex50Percentile.contains(lineIndex))
         				{
         					aLine[2*k]="3333";
             				aLine[2*k+1]="4444";
@@ -77,7 +77,7 @@ public class ProduceTrace
         				break;
         			//60 percentile
         			case 4:
-        				if (lineIndex60Percentile.contains(lineIndex))
+        				if (lineIndex40Percentile.contains(lineIndex))
         				{
         					aLine[2*k]="5555";
             				aLine[2*k+1]="6666";
