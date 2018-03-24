@@ -1,0 +1,22 @@
+DeviceStorageMo /data/dalvik-cache/arm/system@framework@boot.art 232==>DeviceStorageMo /system/framework/arm64/boot.art 232#SUP: 9 #CONF: 0.75
+DeviceStorageMo /data/dalvik-cache/arm/system@framework@boot.art 232==>DeviceStorageMo /system/framework/arm64/boot.art 232,DeviceStorageMo /data/dalvik-cache/arm64/system@framework@boot.art 232#SUP: 9 #CONF: 0.75
+DeviceStorageMo /data/dalvik-cache/arm/system@framework@boot.art 232==>DeviceStorageMo /data/dalvik-cache/arm64/system@framework@boot.art 232#SUP: 9 #CONF: 0.75
+DeviceStorageMo /system/framework/arm/boot.art 232==>DeviceStorageMo /data/dalvik-cache/arm/system@framework@boot.art 232#SUP: 10 #CONF: 0.7692307692307693
+DeviceStorageMo /system/framework/arm/boot.art 232==>DeviceStorageMo /data/dalvik-cache/arm/system@framework@boot.art 232,DeviceStorageMo /data/dalvik-cache/arm64/system@framework@boot.art 232#SUP: 8 #CONF: 0.6153846153846154
+adbd /system/bin/sh 21==>adbd /system/bin/linker64 448#SUP: 4 #CONF: 0.8
+adbd /system/bin/sh 21==>sh /system/etc/ld.config.txt 1024#SUP: 4 #CONF: 0.8
+adbd /system/bin/sh 21==>sh /system/etc/ld.config.txt 1024,adbd /system/bin/linker64 448#SUP: 4 #CONF: 0.8
+DeviceStorageMo /system/framework/arm64/boot.art 232==>DeviceStorageMo /data/dalvik-cache/arm64/system@framework@boot.art 232#SUP: 11 #CONF: 1.0
+DeviceStorageMo /system/framework/arm/boot.art 232==>DeviceStorageMo /system/framework/arm64/boot.art 232#SUP: 8 #CONF: 0.6153846153846154
+DeviceStorageMo /system/framework/arm/boot.art 232==>DeviceStorageMo /system/framework/arm64/boot.art 232,DeviceStorageMo /data/dalvik-cache/arm64/system@framework@boot.art 232#SUP: 8 #CONF: 0.6153846153846154
+DeviceStorageMo /system/framework/arm/boot.art 232==>DeviceStorageMo /system/framework/arm64/boot.art 232,DeviceStorageMo /data/dalvik-cache/arm/system@framework@boot.art 232#SUP: 8 #CONF: 0.6153846153846154
+DeviceStorageMo /system/framework/arm/boot.art 232==>DeviceStorageMo /system/framework/arm64/boot.art 232,DeviceStorageMo /data/dalvik-cache/arm/system@framework@boot.art 232,DeviceStorageMo /data/dalvik-cache/arm64/system@framework@boot.art 232#SUP: 8 #CONF: 0.6153846153846154
+adbd /system/bin/linker64 448==>sh /system/etc/ld.config.txt 1024#SUP: 4 #CONF: 1.0
+Thread-18 /data/data/com.sina.weibo/databases/weibolog 16==>netd /system/etc/hosts 4096#SUP: 6 #CONF: 0.8571428571428571
+Thread-5 /data/data/com.sina.weibo/databases/weibolog-journal 8==>Thread-5 /data/data/com.sina.weibo/databases/weibolog 16#SUP: 4 #CONF: 0.5
+Thread-5 /data/data/com.sina.weibo/databases/weibolog-journal 8==>Thread-5 /data/data/com.sina.weibo/databases/weibolog 16#SUP: 10 #CONF: 0.625
+Thread-5 /data/data/com.sina.weibo/databases/weibolog 16==>Thread-5 /data/data/com.sina.weibo/databases/weibolog-journal 8#SUP: 12 #CONF: 0.631578947368421
+com.sina.weibo /system/framework/framework-res.apk 39==>com.sina.weibo /system/framework/framework-res.apk 28#SUP: 4 #CONF: 1.0
+notification-sq /data/system/notification_log.db 16==>notification-sq /data/system/notification_log.db-journal 8#SUP: 4 #CONF: 0.8
+com.sina.weibo /system/framework/framework-res.apk 28==>DeviceStorageMo /system/framework/arm/boot.art 232#SUP: 4 #CONF: 0.6666666666666666
+DeviceStorageMo /system/framework/arm/boot.art 232==>DeviceStorageMo /data/dalvik-cache/arm64/system@framework@boot.art 232#SUP: 8 #CONF: 0.6153846153846154
